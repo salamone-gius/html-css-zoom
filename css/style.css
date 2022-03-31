@@ -8,14 +8,30 @@
 /* ----- COMMON ----- */
 body *{
     background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     /* da togliere */
     /* border: 1px solid red; */
     color: white;
+    font-weight: 600;
 }
 
 .flex {
     display: flex;
+}
+
+button {
+    border: none;
+    padding: 0.5em;
+    text-align: center;
+    line-height: 10px;
+}
+
+button:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+button:active {
+    transform: translateY(1px);
 }
 
 /* ----- HEADER ----- */
@@ -38,6 +54,57 @@ header .flex.box {
 .left.box > img:first-of-type {
     margin-right: 20px;
 }
-.right.box p {
+
+.right.box > button:last-of-type {
     color: rgb(206, 206, 206);
+}
+
+/* ----- MAIN ----- */
+.partecipants.grid {
+    width: 90vw;
+    height: calc(100vh - 100px);
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    overflow-y: hidden;
+}
+
+.user {
+    position: relative;
+    width: calc(100% / 6 - 5px);
+    height: calc(100% / 6 - 5px);
+    background-image: url("../img/maronno.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.partecipants.grid > .user:first-child {
+    background-image: url("../img/papafr.png");
+}
+
+.user, .username {
+    border-radius: 7px;
+}
+
+.username {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.username > * {
+    background-color: transparent;
+}
+
+.username > i {
+    color: rgb(204, 60, 51);
+}
+
+.username > span {
+    color: rgb(230, 230, 230);
 }
