@@ -6,13 +6,10 @@
 }
 
 /* ----- COMMON ----- */
-body *{
+body {
     background-color: black;
     font-family: sans-serif;
-    /* da togliere */
-    /* border: 1px solid red; */
     color: white;
-    font-weight: 600;
 }
 
 .flex {
@@ -21,13 +18,9 @@ body *{
 
 button {
     border: none;
-    padding: 0.5em;
+    padding: 4px;
     text-align: center;
-    line-height: 10px;
-}
-
-button:hover {
-    background-color: rgb(70, 70, 70);
+    background-color: transparent;
 }
 
 button:active {
@@ -36,10 +29,11 @@ button:active {
 
 /* ----- HEADER ----- */
 header {
-    width: 100vw;
-    min-height: 50px;
+    width: 100%;
     justify-content: space-between;
-    padding: 0 10px;
+    align-items: center;
+    padding: 3px 10px;
+    margin-bottom: 20px;
 }
 
 header img {
@@ -59,10 +53,14 @@ header .flex.box {
     color: rgb(206, 206, 206);
 }
 
+header button {
+    color: white;
+}
+
 /* ----- MAIN ----- */
 .partecipants.grid {
     width: 90vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     margin: auto;
     flex-wrap: wrap;
     justify-content: center;
@@ -73,7 +71,6 @@ header .flex.box {
 .user {
     position: relative;
     width: calc(100% / 6 - 5px);
-    height: calc(100% / 6 - 5px);
     background-image: url("../img/maronno.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -107,4 +104,53 @@ header .flex.box {
 
 .username > span {
     color: rgb(230, 230, 230);
+}
+
+/* ----- FOOTER ----- */
+footer {
+    background-color: rgb(27, 27, 27);
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.flex.row {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer i {
+    font-size: 24px;
+}
+
+footer button {
+    color: rgb(168, 168, 168);
+    margin: 0 10px;
+}
+
+.fa-chevron-up {
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: -25px;
+}
+
+.label {
+    margin-top: 10px;
+}
+
+.chevron {
+    position: relative;
+}
+
+.green  {
+    color: rgb(103, 214, 105);
+}
+
+.end.btn{
+    font-weight: 900;
+    color: white;
+    background-color: rgb(200, 60, 50);
+    border-radius: 8px;
+    padding: 5px 20px;
 }
